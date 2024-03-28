@@ -1,0 +1,63 @@
+.header {
+  color: $main-text-color;
+  @include blockMarginBottom;
+  
+  &__content {
+    @include onTablet {
+      @include contentPaddingInline;
+      @include gridPage;
+
+      margin-block: 105px 140px;
+
+      &--wrap {
+        grid-column: 1 / 4;
+        grid-row: 1;
+      }
+    }
+
+    @include onDesktop {
+      margin-block: 90px 170px;
+
+      &--wrap {
+        grid-column: 1 / 5;
+        padding-top: 80px;
+      }
+    }
+  }
+
+  &__img {
+    margin-bottom: 40px;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+
+    @include onTablet {
+      grid-column: 4 / -1;
+      margin-bottom: 0;
+    }
+
+    @include onDesktop {
+      height: 464px;
+      grid-column: 5 / 12;
+    }
+  }
+
+  &__title {
+    @include contentPaddingInline;
+    margin-bottom: 20px;
+    color: $main-text-color;
+
+    @include onTablet {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__descr {
+    @include contentPaddingInline;
+
+    @include onTablet {
+      padding: 0;
+    }
+  }
+}

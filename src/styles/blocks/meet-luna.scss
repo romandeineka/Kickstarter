@@ -1,0 +1,21 @@
+.meet-luna {
+  @include blockMarginBottom;
+
+  &__wrap {
+    padding-inline: 12px;
+    text-align: center;
+
+    @include onTablet {
+      @include contentPaddingInline;
+      @include blockMarginBottom;
+    }
+
+    @include onDesktop {
+      padding-inline: 297px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

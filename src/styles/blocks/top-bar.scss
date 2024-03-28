@@ -1,0 +1,40 @@
+.top-bar {
+  @include contentPaddingInline;
+
+  padding-block: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include onDesktop {
+    padding-block: 30px 0;
+  }
+
+  &__buttons {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    @include onDesktop {
+      gap: 47px;
+    }
+  }
+
+  &__wrap {
+    @include onTablet {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+
+  &__icon {
+    @include onDesktop {
+      display: none;
+    }
+  }
+}

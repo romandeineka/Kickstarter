@@ -1,0 +1,10 @@
+.advantages {
+  @include contentPaddingInline;
+  @include blockMarginBottom;
+
+  @include onTablet {
+    @include gridPage;
+
+    row-gap: 65px;
+  }
+}

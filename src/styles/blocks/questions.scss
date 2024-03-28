@@ -1,0 +1,111 @@
+.questions {
+  @include contentPaddingInline;
+  @include blockMarginBottom;
+
+  @include onTablet {
+    @include gridPage;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    color: $main-text-color;
+
+    @include onTablet {
+      grid-column: 1 / 5;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__form {
+
+    @include onTablet {
+      grid-column: 5 / -1;
+    }
+
+    @include onDesktop {
+      grid-column: 7 / -1;
+    }
+
+    &--email {
+      width: 100%;
+      height: 48px;
+      border: 1px solid #828282;
+      color: #bdbdbd;
+      padding: 0;
+      padding-inline: 20px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+
+      @include onTablet {
+        padding-inline: 30px;
+      }
+
+      @include onDesktop {
+        padding-inline: 36px;
+      }
+
+      &::placeholder {
+        color: #bdbdbd;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+      }
+    }
+
+    &--message {
+      height: 128px;
+      width: 100%;
+      border: 1px solid #828282;
+      color: #bdbdbd;
+      padding: 0;
+      padding-left: 20px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+      resize: none;
+
+      @include onTablet {
+        padding: 12px 30px;
+        height: 201px;
+      }
+
+      @include onDesktop {
+        height: 128px;
+        padding: 16px 36px;
+      }
+
+      &::placeholder {
+        color: #bdbdbd;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+
+    &--button {
+      background-color: #0db2b3;
+      height: 40px;
+      color: #ffffff;
+      border-style: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14px;
+      width: 40%;
+      padding: 0;
+
+      @include onTablet {
+        width: 27%;
+      }
+
+      @include onDesktop {
+        width: 19%;
+      }
+    }
+  }
+}

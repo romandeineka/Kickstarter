@@ -1,0 +1,91 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #FFFFFF;
+
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
+
+  &:target {
+    opacity: 1;
+    pointer-events: all
+  }
+  &__content {
+    @include contentPaddingInline;
+    padding-block: 31px 50px;
+
+    @include onTablet {
+      padding-block: 40px 646px;
+    }
+  }
+
+  &__bottom {
+    @include contentPaddingInline;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__setings {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    margin-bottom: 162px;
+    align-items: center;
+
+    @include onTablet {
+      margin-bottom: 0;
+      gap: 30px;
+    }
+  }
+
+  &__specs {
+    text-decoration: none;
+    font-weight: 300;
+    line-height: 17px;
+    color: #4f4f4f;
+  }
+
+  &__lang {
+    display: flex;
+    line-height: 18px;
+
+    &--bold {
+      color: $main-text-color;
+      font-weight: 400;
+    }
+
+    &--light {
+      font-weight: 300;
+      color: #828282;
+    }
+  }
+
+  &__button {
+    background-color: $main-text-color;
+    height: 48px;
+    width: 100%;
+    border-style: none;
+    margin-bottom: 30px;
+    padding: 0;
+
+    @include onTablet {
+      margin-bottom: 0;
+      width: 100px;
+    }
+
+    &--link {
+      color: #FFFFFF;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 100%;
+      display: block;
+      line-height: 48px;
+    }
+  }
+}

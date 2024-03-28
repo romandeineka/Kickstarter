@@ -1,0 +1,20 @@
+.features {
+  margin-bottom: 90px;
+
+  @include onTablet {
+    @include blockMarginBottom;
+  }
+
+  @include onDesktop {
+    position: relative;
+  }
+  
+  &__title {
+    @include contentPaddingInline;
+
+    margin-bottom: 32px;
+    color: $main-text-color;
+  }
+
+ 
+}

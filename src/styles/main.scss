@@ -1,7 +1,27 @@
 @import 'utils';
 @import 'fonts';
 @import 'typography';
+@import 'blocks/header';
+@import 'blocks/top-bar';
+@import 'blocks/menu';
+@import 'blocks/nav';
+@import 'blocks/advantages';
+@import 'blocks/advantage';
+@import 'blocks/meet-luna';
+@import 'blocks/about-us';
+@import 'blocks/qoute';
+@import 'blocks/features';
+@import 'blocks/slide';
+@import 'blocks/questions';
+@import 'blocks/footer';
 
 body {
-  background: $c-gray;
+  font-family: 'Inter', sans-serif;
+  min-width: 320px;
+  background-color: #f7f7f7;
+}
+
+* {
+  margin: 0;
+  scroll-behavior: smooth;
 }

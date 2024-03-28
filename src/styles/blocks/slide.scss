@@ -1,0 +1,155 @@
+.slide {
+  @include onTablet {
+    @include gridPage;
+  }
+
+  @include onDesktop {
+    display: block;
+  }
+
+  &__title {
+    padding-block: 30px 20px;
+    color: #0c797a;
+    text-transform: uppercase;
+    @include contentPaddingInline;
+
+    @include onTablet {
+      grid-column: 2 / 5;
+      padding-block: 60px 20px;
+      padding-inline: 0;
+    }
+  }
+
+  &__list {
+    margin-left: 18px;
+    margin-bottom: 50px;
+    @include contentPaddingInline;
+
+    @include onTablet {
+      grid-column: 2 / 6;
+      padding: 0;
+    }
+
+    &--item {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 27px;
+      color: $main-text-color;
+
+      @include onDesktop {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__moove {
+    @include contentPaddingInline;
+    text-align: center;
+    position: relative;
+    width: 264px;
+
+    @include onTablet {
+      grid-column: 2 / 4;
+      padding: 0;
+      width: 110px;
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+
+    &--number-current {
+      padding-right: 26px;
+      color: $main-text-color;
+    }
+
+    &--number-total {
+      position: absolute;
+      left: 160px;
+      top: 32px;
+      color: #0c797a;
+
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 13px;
+
+      @include onTablet {
+        left: 58px;
+      }
+    }
+  }
+
+  &__img {
+    background-image: url(../images/features/bc-img.png);
+    height: 173px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #d6ecec;
+
+    @include onTablet {
+      grid-column: 4 / -1;
+      height: 226px;
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include onDesktop {
+        display: block;
+        background-image: url(../images/features/bc-img.png);
+        height: 300px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #d6ecec;
+        grid-column: 7 / -1;
+        position: absolute;
+        bottom: 0px;
+        right: 152px;
+        width: 44%;
+      }
+    }
+  }
+
+  &__wrap {
+    background-color: #d6ecec;
+
+    @include onTablet {
+      margin-inline: 34px;
+    }
+    @include onDesktop {
+      background-color: #d6ecec;
+      margin-inline: 123px;
+
+      @include gridPage;
+    }
+  }
+
+  &__connectivity {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      grid-column: 2 / 5;
+    }
+  }
+
+  &__app-features {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      grid-column: 7 / 11;
+    }
+  }
+
+  &__sound-music {
+    grid-column: 2 / 6;
+  }
+}

@@ -1,0 +1,122 @@
+.about-us {
+  @include contentPaddingInline;
+  @include blockMarginBottom;
+
+  @include onTablet {
+    padding-inline: 0;
+  }
+
+  @include onDesktop {
+    @include contentPaddingInline;
+  }
+
+  &__wrap {
+    margin-bottom: 110px;
+
+    @include onTablet {
+      display: grid;
+      column-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        'img title'
+        'img descr'
+        'img link';
+      padding-right: 34px;
+      margin-bottom: 15px;
+    }
+
+    @include onDesktop {
+      column-gap: 30px;
+      padding-right: 0;
+    }
+
+    &--luna {
+      @include onTablet {
+        column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          'title img'
+          'descr img'
+          'link img';
+          padding-inline: 34px 0;
+      }
+
+      @include onDesktop {
+        padding-inline: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    color: $main-text-color;
+
+    @include onTablet {
+      grid-area: title;
+    }
+  }
+
+  &__img {
+    margin-bottom: 20px;
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+
+    @include onTablet {
+      height: 415px;
+      object-position: -101px;
+      grid-area: img;
+    }
+
+    @include onDesktop {
+      height: 388px;
+      object-position: 0;
+    }
+  }
+
+  &__descr {
+    display: block;
+    margin-bottom: 30px;
+    color: #7c7c7c;
+
+    @include onTablet {
+      grid-area: descr;
+      margin-bottom: 60px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #0db2b3;
+
+    @include onTablet {
+      grid-area: link;
+      padding-bottom: 200px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      background-color: #0db2b3;
+      width: 43%;
+      display: block;
+      top: 19px;
+
+      @include onTablet {
+        width: 15%;
+      }
+
+      @include onDesktop {
+        width: 10%;
+      }
+    }
+  }
+}

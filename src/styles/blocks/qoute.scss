@@ -1,0 +1,63 @@
+.qoute {
+  @include contentPaddingInline;
+  @include blockMarginBottom;
+
+  text-align: center;
+
+
+
+  &__background-image {
+    background-image: url(../images/qoute/bc-img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 171px;
+    background-position: center;
+    margin-bottom: 30px;
+
+    @include onTablet {
+      height: 189px;
+      margin-bottom: 40px;
+    }
+
+    @include onDesktop {
+      height: 192px;
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__descr {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-top: 50px;
+    color: $main-text-color;
+
+    @include onTablet {
+      font-size: 24px;
+      line-height: 36px;
+      padding-top: 60px;
+    }
+
+    @include onDesktop {
+      padding-inline: 204px;
+      padding-top: 42px;
+    }
+  }
+
+  &__img {
+    height: 62px;
+    margin-bottom: 10px;
+
+    @include onTablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+}
