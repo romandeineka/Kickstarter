@@ -1,6 +1,8 @@
 .meet-luna {
   @include blockMarginBottom;
 
+  @include hover(scale, 1.05);
+
   &__wrap {
     padding-inline: 12px;
     text-align: center;

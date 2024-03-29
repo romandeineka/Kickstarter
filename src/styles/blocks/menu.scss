@@ -49,6 +49,8 @@
     font-weight: 300;
     line-height: 17px;
     color: #4f4f4f;
+
+    @include hover(scale, 1.2);
   }
 
   &__lang {
@@ -73,6 +75,8 @@
     border-style: none;
     margin-bottom: 30px;
     padding: 0;
+
+    @include hover(background-color, #131313);
 
     @include onTablet {
       margin-bottom: 0;

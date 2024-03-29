@@ -38,7 +38,7 @@
           'title img'
           'descr img'
           'link img';
-          padding-inline: 34px 0;
+        padding-inline: 34px 0;
       }
 
       @include onDesktop {
@@ -61,6 +61,8 @@
     height: 210px;
     width: 100%;
     object-fit: cover;
+
+    @include hover(scale, 1.05);
 
     @include onTablet {
       height: 415px;
@@ -96,9 +98,25 @@
     line-height: 14px;
     color: #0db2b3;
 
+    &:hover::before {
+      width: 100%;
+      transition: all 0.3s;
+    }
+
     @include onTablet {
       grid-area: link;
-      padding-bottom: 200px;
+      margin-bottom: 200px;
+      &:hover::before {
+        width: 36%;
+        transition: all 0.3s;
+      }
+    }
+
+    @include onDesktop {
+      &:hover::before {
+        width: 22%;
+        transition:all 0.3s;
+      }
     }
 
     &::before {

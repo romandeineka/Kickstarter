@@ -11,6 +11,8 @@
   &__logo {
     display: none;
 
+    @include hover(scale, 1.2);
+
     @include onTablet {
       display: block;
       text-align: center;
@@ -20,7 +22,7 @@
 
   &__go-to-top {
     display: none;
-     
+
     @include onTablet {
       display: block;
       position: absolute;
@@ -50,11 +52,21 @@
     @include onDesktop {
       gap: 40px;
     }
+
+    &--facebook {
+      @include hover(scale, 1.35);
+    }
+    &--twitter {
+      @include hover(scale, 1.35);
+    }
+    &--instagram {
+      @include hover(scale, 1.35);
+    }
   }
 
   &__privacy {
     display: block;
     text-align: center;
-    color: #BDBDBD;
+    color: #bdbdbd;
   }
 }

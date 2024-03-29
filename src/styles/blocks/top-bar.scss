@@ -37,4 +37,12 @@
       display: none;
     }
   }
+
+  &__logo {
+    @include hover(scale, 1.2);
+  }
+}
+
+.img-menu {
+  @include hover(scale, 1.2);
 }
